@@ -1,0 +1,9 @@
+{
+  "name": "sentences-generator",
+  "version": "0.0.0",
+  "description": "SentencesGenerator",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

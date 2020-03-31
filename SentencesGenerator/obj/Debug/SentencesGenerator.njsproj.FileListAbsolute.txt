@@ -1,0 +1,3 @@
+C:\Users\space\Music\SentencesGenerator\SentencesGenerator\obj\Debug\SentencesGenerator.njsprojAssemblyReference.cache
+C:\Users\space\Music\SentencesGenerator\SentencesGenerator\obj\Debug\SentencesGenerator.njsproj.CoreCompileInputs.cache
+C:\Users\space\Music\SentencesGenerator\SentencesGenerator\bin\Microsoft.NodejsTools.WebRole.dll
