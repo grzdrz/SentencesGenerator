@@ -1,6 +1,6 @@
 module.exports = class SentencesParser {
     constructor() {
-        this.sentences = [];
+        this.sentences = [/*[], [], ...*/];
         this.wordsOfSentences = [];
     }
 
