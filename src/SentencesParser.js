@@ -13,12 +13,12 @@ module.exports = class SentencesParser {
         let wordPattern = /(([a-z]|['])+)/gi;
         try {
             for (let i = 0; i < splittedText.length; i++) {
-                //âû÷ëåíÿåì âñå ñëîâà èç òåêóùåãî ïðåäëîæåíèÿ
+                //Ð²Ñ‹Ñ‡Ð»ÐµÐ½ÑÐµÐ¼ Ð²ÑÐµ ÑÐ»Ð¾Ð²Ð° Ð¸Ð· Ñ‚ÐµÐºÑƒÑ‰ÐµÐ³Ð¾ Ð¿Ñ€ÐµÐ´Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ
                 let regexResult = splittedText[i].match(wordPattern);
                 if (!regexResult) continue; 
                 for (let e of regexResult)
                     this.wordsOfSentences.push(e.toLowerCase());
-                //åñëè ñëîâ íàéäåíî íåáûëî íè÷åãî íå äîáàâëÿåì
+                //ÐµÑÐ»Ð¸ ÑÐ»Ð¾Ð² Ð½Ð°Ð¹Ð´ÐµÐ½Ð¾ Ð½ÐµÐ±Ñ‹Ð»Ð¾ Ð½Ð¸Ñ‡ÐµÐ³Ð¾ Ð½Ðµ Ð´Ð¾Ð±Ð°Ð²Ð»ÑÐµÐ¼
                 if (this.wordsOfSentences.length !== 0) {
                     this.sentences.push(this.wordsOfSentences);
                     this.wordsOfSentences = [];

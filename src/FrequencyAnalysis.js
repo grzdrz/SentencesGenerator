@@ -6,7 +6,7 @@ module.exports = class FrequencyAnalysis {
 
         let frequencyDict = this.getFrequencyDictionary(text);
 
-        //отсеиваем самые частотные комбинации
+        //РѕС‚СЃРµРёРІР°РµРј СЃР°РјС‹Рµ С‡Р°СЃС‚РѕС‚РЅС‹Рµ РєРѕРјР±РёРЅР°С†РёРё
         let resultDict = new Map();
         for (let e of frequencyDict) {
             let curWordKey = e[0].split(":")[0];
@@ -14,7 +14,7 @@ module.exports = class FrequencyAnalysis {
             let strengthOfCurCombination = e[1];
 
             if (resultDict.has(curWordKey)) {
-                //если частота текущей комбинации из ч/словаря равна частоте комбинации с которой произошла коллизия ключей
+                //РµСЃР»Рё С‡Р°СЃС‚РѕС‚Р° С‚РµРєСѓС‰РµР№ РєРѕРјР±РёРЅР°С†РёРё РёР· С‡/СЃР»РѕРІР°СЂСЏ СЂР°РІРЅР° С‡Р°СЃС‚РѕС‚Рµ РєРѕРјР±РёРЅР°С†РёРё СЃ РєРѕС‚РѕСЂРѕР№ РїСЂРѕРёР·РѕС€Р»Р° РєРѕР»Р»РёР·РёСЏ РєР»СЋС‡РµР№
                 if (strengthOfCurCombination === frequencyDict.get(curWordKey + ":" + resultDict.get(curWordKey))) {
                     if (curWordValue < resultDict.get(curWordKey))
                         resultDict.set(curWordKey, curWordValue);
@@ -30,9 +30,9 @@ module.exports = class FrequencyAnalysis {
     }
 
     getFrequencyDictionary(text) {
-        //словарь пар:
-        //key === комбинация 2х и 3х слов в рамках 1го предложения
-        //value === сколько раз эта комбинация встречается во всем тексте
+        //СЃР»РѕРІР°СЂСЊ РїР°СЂ:
+        //key === РєРѕРјР±РёРЅР°С†РёСЏ 2С… Рё 3С… СЃР»РѕРІ РІ СЂР°РјРєР°С… 1РіРѕ РїСЂРµРґР»РѕР¶РµРЅРёСЏ
+        //value === СЃРєРѕР»СЊРєРѕ СЂР°Р· СЌС‚Р° РєРѕРјР±РёРЅР°С†РёСЏ РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ РІРѕ РІСЃРµРј С‚РµРєСЃС‚Рµ
         let frequencyDict = new Map();
         for (let i = 0; i < text.length; i++) {
             for (let j = 0; j < text[i].length - 1; j++) {
